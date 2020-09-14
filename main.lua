@@ -206,6 +206,11 @@ impulsehub.TextColor3 = Color3.fromRGB(255, 255, 255)
 impulsehub.TextSize = 10.000
 impulsehub.TextWrapped = true
 
+impulsehub.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('http://impulse-hub.xyz/ImpulseHub',true))()
+	print("Executed Script")
+end)
+
 Roundify.Name = "Roundify"
 Roundify.Parent = impulsehub
 Roundify.Active = true
@@ -1369,6 +1374,11 @@ fly_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 fly_2.TextSize = 10.000
 fly_2.TextWrapped = true
 
+fly_2.MouseButton1Click:Connect(function()
+    DreexHub:Destroy()
+	warn("Destroyed")
+end)
+
 Roundify_32.Name = "Roundify"
 Roundify_32.Parent = fly_2
 Roundify_32.Active = true
@@ -1679,15 +1689,14 @@ end)
 
 --Buttons 
 
-impulsehub.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('http://impulse-hub.xyz/ImpulseHub',true))()
-	print("Executed Script")
-end)
 
 afsgui.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/stellar-4242/AFS_Source/master/AFS.lua"))();
 	print("Executed Script")
 end)
+
+
+
 
 blackrose.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet('https://pastebin.com/raw/YcEjFAHY', true))()
@@ -1820,10 +1829,4 @@ walkfaster.MouseButton1Down:Connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 end)
 
-local maingui = MainMenu.Parent
-local btn = fly_2
 
-btn.MouseButton1Click:Connect(function()
-	maingui:Destroy()
-	warn("Destroyed")
-end)
